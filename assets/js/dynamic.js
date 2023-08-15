@@ -187,3 +187,96 @@ function getArtistNames(all_data){
     });
     return str.join(", ");
 }
+
+
+
+
+let artists = [
+    {
+        artistImage: "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg",
+        playListName: "Top 50 - India",
+    },
+    {
+        artistImage: "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg",
+        playListName: "Top 50 - Global",
+    },
+    {
+        artistImage: "https://i.scdn.co/image/ab67706f000000023ec51dd9c17a9add42c2e249",
+        playListName: "This Is Arijit Singh",
+    },
+    {
+        artistImage: "https://i.scdn.co/image/ab67706f00000002bc10ef09f6d3ca27092204b8",
+        playListName: "This Is Arman Malik",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0KEAbC-default.jpg",
+        playListName: "This Is A R Rehman",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0QBBOU-default.jpg",
+        playListName: "This Is Pritam",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0arULD-default.jpg",
+        playListName: "This Is Shreya Ghoshal",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0Kr1PQ-default.jpg",
+        playListName: "This Is Sachin-Jigar",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO40xRQ6-default.jpg",
+        playListName: "This is Vishal Shekhar",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO1n6IJz-default.jpg",
+        playListName: "This is Atif Aslam",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0FcUGj-default.jpg",
+        playListName: "This Is Sonu Nigam",
+    },
+    {
+        artistImage: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0sDxsT-default.jpg",
+        playListName: "This Is Tulsi Kumar",
+    },
+]
+
+const artistWrapper = document.querySelector("#artist-wrapper");
+artists.forEach((artist , index)=>{
+    let swiperSlide = document.createElement('div');
+    swiperSlide.classList.add("swiper-slide");
+
+    swiperSlide.innerHTML = `
+        <div class="playlist-card-wrapper">
+            <div class="h-100">
+                <div class="playlist-card-img-wrapper">
+                    <div class="img-padding" style="--card-color: #682828;">
+                        <div>
+                            <img src="${artist.artistImage}" alt="not-found" class="playlist-card-img">
+                        </div>
+                    </div>
+                    <div class="playlist-play-btn-wrapper">
+                        <div class="flex-shrink-0">
+                            <button class="playlist-play-btn">
+                                <span class="playlist-btn-svg-wrapper bright-accent">
+                                    <span class="quick-play-btn-icon-wrapper">
+                                        <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 haNxPq"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-card-content-wrapper">
+                    <a href="" class="playlist-name-wrapper">
+                        <div class="daily-playlist-name ellipse-true">${artist.playListName}</div>
+                    </a>
+                    <div class="f-res daily-playlist-artists clamp-true">This is Armaan Malik. The essential tracks all in one playlist.</div>
+                </div>
+            </div>
+        </div>
+    `
+
+    artistWrapper.appendChild(swiperSlide);
+});
