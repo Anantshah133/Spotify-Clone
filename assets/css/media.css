@@ -1,0 +1,41 @@
+
+/* ----------------------- Login media ----------------------- */
+@media (width <= 768px) {
+    .login-page-wrapper{
+        background: var(--sp-black);
+    }
+    .login-form h1{
+        margin: 0 0 32px;
+        font-size: 2rem;
+        text-align: left !important;
+    }
+    .ext-login , .login-form-group{
+        width: 100%;
+    }
+    .hr-line{
+        margin: 32px 0;
+    }
+    .sign-up-info a{
+        display: block;
+        margin-block-start: 5px;
+    }
+    header{
+        padding: 45px 32px 0px;
+    }
+    .spotify-logo{
+        height: 24px;
+    }
+}
+
+@media (width >= 768px){
+    .f-res {
+        font-size: 0.875rem;
+    }
+}
+
+@media (width >= 992px) {
+    .sp-login-alert-wrapper{
+        padding: 0 50px;
+    }
+}
+/* ----------------------- Login media ----------------------- */
